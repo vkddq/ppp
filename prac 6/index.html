@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="loader">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <div id="cart-modal" class="cart-modal hide">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-cart" onclick="toggleCart()">×</span>
+            </div>
+            <div class="cart-items-list">
+                <p class="empty-msg">Cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total-price">0</span> USD</h3>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo">My Shop</div>
+            <div class="cart" onclick="toggleCart()">
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart" />
+                    <div id="cart-counter" class="hide">0</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="items-container">
+        <div class="wrapper">
+            <div class="filters">
+                <div class="search">
+                    <label>Search:</label>
+                    <input id="search-input" type="text" placeholder="Type to search..." />
+                </div>
+                <div class="price">
+                    <label>Price:</label>
+                    <div class="price-inputs">
+                        <input id="price-min" type="number" min="0" placeholder="min" />
+                        <input id="price-max" type="number" max="99999" placeholder="max" />
+                    </div>
+                </div>
+                <div class="category">
+                    <label>Category:</label>
+                    <select id="category-select">
+                        <option value="all" selected>All</option>
+                    </select>
+                </div>
+                <div class="rating">
+                    <label>Min Rating:</label>
+                    <div id="rating-filters-container"></div>
+                </div>
+                <div class="extra-functions">
+                    <label>Extra functions:</label>
+                    <div class="extra-functions-container"></div>
+                </div>
+                <button onclick="resetFilters()" class="reset-btn">Reset Filters</button>
+            </div>
+
+            <div class="items"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
