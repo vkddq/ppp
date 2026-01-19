@@ -1,0 +1,162 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #353042;
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    color: #333;
+}
+
+.logo {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #ccc;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+    color: #8e66bd;
+}
+
+
+.container {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.header-subtitle {
+    color: #ccc;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    width: 260px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card.purple { background-color: #8860b9; }
+.card.green { background-color: #51bc90; }
+.card.blue { background-color: #3c9ee5; }
+.card.orange { background-color: #ef9c46; }
+
+
+.white-box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 10px;
+    color: #333;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.plan-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.period {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #999;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: white;
+}
+
+
+.btn {
+    background-color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+}
+
+.purple .plan-name, .purple .price, .purple .btn { color: #8860b9; }
+.green .plan-name, .green .price, .green .btn { color: #51bc90; }
+.blue .plan-name, .blue .price, .blue .btn { color: #3c9ee5; }
+.orange .plan-name, .orange .price, .orange .btn { color: #ef9c46; }
